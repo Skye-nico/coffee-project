@@ -7,47 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div>
 
-    <div class="row justify-content-center">
+    <div class="container text-center">
         <h1>Coffee!</h1>
     </div>
 
-    <main class="container">
+    <div class="container">
 
-        <div class="row">
-
-            <div class="col-6">
-                <tbody>
-                    <div id="coffees"></div>
-                </tbody>
-
+            <div class="col-6 flex-wrap">
+                    <div id="coffees" class="flex-wrap"></div>
             </div>
 
             <div class="col-6">
                 <form class="d-flex flex-column">
                     <label for="roast-selection" class="font-weight-bold">Roast</label>
-                    <select id="roast-selection">
+                    <select id="roast-selection" onchange="updateCoffees(this)">
                         <option selected>All</option>
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
                     </select>
                     <label for="search"  class="mt-2 font-weight-bold">Coffee Name</label>
-                    <input type="text" id="search">
+                    <input type="text" id="search" onkeyup="updateCoffees(this)">
                 </form>
             </div>
 
-        </div>
-
-    </main>
-
-
-
-</div>
-
-
-
+    </div>
 <!--    <table>-->
 <!--        <thead>-->
 <!--            <tr>-->
