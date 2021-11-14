@@ -7,22 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div>
 
-    <div class="container text-center">
+    <div class="row justify-content-center">
         <h1>Coffee!</h1>
     </div>
 
-    <div class="container">
+    <main class="container">
 
-            <div class="col-6 flex-wrap">
+        <div class="row">
+
+            <div class="col-6">
+                <div>
                     <div id="coffees" class="flex-wrap"></div>
+                </div>
+
             </div>
 
             <div class="col-6">
                 <form class="d-flex flex-column">
                     <label for="roast-selection" class="font-weight-bold">Roast</label>
                     <select id="roast-selection" onchange="updateCoffees(this)">
-                        <option selected>All</option>
+                        <option>All</option>
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
@@ -32,7 +38,16 @@
                 </form>
             </div>
 
-    </div>
+        </div>
+
+    </main>
+
+
+
+</div>
+
+
+
 <!--    <table>-->
 <!--        <thead>-->
 <!--            <tr>-->

@@ -22,15 +22,10 @@ var coffees = [
 coffees.reverse();
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    // don't want the ID to display
-    // html += '<td>' + coffee.id + '</td>';
-    // displays the name as an h3
-    html += '<h3>' + coffee.name + '</h3>';
-    // displays the roast as a paragraph
-    html += '<p>' + coffee.roast + '</p>';
-    // displays them as a row
-    html += '</tr>';
+    var html = '<div class="coffee d-flex">';
+    html += '<h4 class="mr-1">' + coffee.name + '</h4>';
+    html += '<p class="ml-1">' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
@@ -56,13 +51,11 @@ function updateCoffees() {
 
 
 
-var search = document.querySelector('#search');
-search.addEventListener('keyup', updateCoffees);
-
-var tbody = document.querySelector('#coffees');
+var search = document.querySelector('#search'); // takes value of input on line 36,37
+var tbody = document.querySelector('#coffees'); // div that coffees function create in
+var roastSelection = document.querySelector('#roast-selection'); // takes value of select
 var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+tbody.innerHTML = renderCoffees(coffees); // invokes function above
 
 // submitButton.addEventListener('click', updateCoffees);
